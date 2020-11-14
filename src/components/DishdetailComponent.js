@@ -7,7 +7,6 @@ class DishDetail extends Component {
         super(props);
     }
 
-
     renderComments(comments){
         // console.log(comments)
         if (comments != null) {
