@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
 
@@ -7,11 +7,18 @@ class DishDetail extends Component {
         super(props);
     }
 
+    componentDidMount(){
+        console.log('Dishdetail componentDidMount Invoked.')
+    }
+
+    componentDidUpdate(){
+        console.log('Dishdetail componentDidUpdate Invoked.')
+    }
+
     renderComments(comments){
-        // console.log(comments)
         if (comments != null) {
             let list = comments.map((comments)=>{
-                let date = comments.date
+                // let date = comments.date
                 return(
                     <li key={comments.id} >
                         <div>
@@ -54,6 +61,9 @@ class DishDetail extends Component {
     }
 
     render() {
+        console.log('Dishdetail render Invoked.');
+
+        
         const selectedDish = this.props.selectedDish;
         if (selectedDish != null) {
             return (
