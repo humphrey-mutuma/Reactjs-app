@@ -17,6 +17,8 @@ function RenderDish({selectedDish}) {
 }
 
 
+ 
+
  function RenderComments({comments}){
         if (comments != null) {
             let list = comments.map((comments)=>{
@@ -48,6 +50,9 @@ function RenderDish({selectedDish}) {
         }
     }
 //  ----------------
+// onDishSelect(dishId) {
+//     this.setState({ selectedDish: dishId});
+//   }
 
    const DishDetail = (props) => {
         const selectedDish = props.selectedDish;
